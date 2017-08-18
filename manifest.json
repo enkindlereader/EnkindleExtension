@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Enkindle Reader",
+  "version": "0.1",
+  "author": "Aleksander Gajewski",
+  "description": "Enkindle Reader - chrome plugin",
+  "icons": {
+    "512": "icon.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Enkindle Reader",
+    "default_popup": "popup_options.html"
+  },
+  "permissions": [
+    "*://*.quicksave.pl:*/",
+    "*://*.quicksave.io:*/",
+    "*://*/",
+    "tabs",
+    "cookies", 
+    "contextMenus", 
+    "notifications",
+    "storage"
+  ],
+  "background": {
+     "scripts": [
+       "plugin.js",
+       "background.js",
+       "ChromeLog.js",
+       "popup_options.js"
+     ]
+  },
+  "options_ui": {
+    "page": "popup_options.html",
+    "chrome_style": true
+  }
+}
