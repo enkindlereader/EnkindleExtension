@@ -399,9 +399,9 @@ var EnkindleController = EnkindleController || class {
         let defaultText = text;
 
         let defaultSettings = {
-            fontSize: 2.0,
+            fontSize: 3.0,
             showRadius: true,
-            radius: 30
+            radius: 15
         };
 
         this.settings = defaultSettings;
@@ -432,6 +432,8 @@ var EnkindleController = EnkindleController || class {
             that.isPlaying = true;
             that.lineReaderComponent.play();
         }, 200);
+
+        this.setFontSize(this.settings.fontSize);
     }
 
     close(){
